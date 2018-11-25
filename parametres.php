@@ -9,7 +9,7 @@
 <body style="font-family: sans-serif;">
     <h1>Exercices pour apprendre le PHP (Paramètres URL)</h1>
     <h2>Exercice 1</h2>
-    <a href="parametresURL.php?nom=Avaux&amp;prenom=Axel">Premier paramètre</a><br />
+    <a href="parametres.php?nom=Avaux&amp;prenom=Axel">Premier paramètre</a><br />
     <?php
         if (isset($_GET['prenom']) && isset($_GET['nom'])) {
             echo "Bonjour " . $_GET['prenom'] . ' ' .  $_GET['nom'] . ' !';
@@ -26,7 +26,7 @@
         }
     ?>
     <h2>Exercice 3</h2>
-    <a href="parametresURL.php?dateDebut=2/05/2016&amp;dateFin=27/11/2016">Troisème paramètre</a><br />
+    <a href="parametres.php?dateDebut=2/05/2016&amp;dateFin=27/11/2016">Troisème paramètre</a><br />
     <?php
         if (isset($_GET['dateDebut']) && isset($_GET['dateFin'])) {
             echo 'La date de début est le : ' . $_GET['dateDebut'] . '<br />La date de fin est le : ' .  $_GET['dateFin'];
@@ -35,7 +35,7 @@
         }
     ?>
     <h2>Exercice 4</h2>
-    <a href="parametresURL.php?langage=PHP&amp;serveur=WAMP">Quatrième paramètre</a><br />
+    <a href="parametres.php?langage=PHP&amp;serveur=WAMP">Quatrième paramètre</a><br />
     <?php
         if (isset($_GET['langage']) && isset($_GET['serveur'])) {
             echo 'Le langage est: "' . $_GET['langage'] . '" hébergé grâce à: "' . $_GET['serveur'] . '".';
@@ -44,7 +44,7 @@
         }
     ?>
     <h2>Exercice 5</h2>
-    <a href="parametresURL.php?semaine=12">Cinquième paramètre</a><br />
+    <a href="parametres.php?semaine=12">Cinquième paramètre</a><br />
     <?php
         if (isset($_GET['semaine'])) {
             echo "Nous sommes la " . $_GET['semaine'] . 'e semaine du mois.';
@@ -53,7 +53,7 @@
         }
     ?>
     <h2>Exercice 6</h2>
-    <a href="parametresURL.php?batiment=12&amp;salle=101">Sixième paramètre</a><br />
+    <a href="parametres.php?batiment=12&amp;salle=101">Sixième paramètre</a><br />
     <?php
         if (isset($_GET['batiment']) && isset($_GET['salle'])) {
             echo "Vous devez rejoindre la salle " . $_GET['salle'] . ' qui se trouve dans le batiment ' . $_GET['batiment'] . '.';
