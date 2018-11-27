@@ -1,13 +1,13 @@
 # MEMO
 ## Pour concatener (Le point):
-    ```php
+    ``` php
     echo 'Bonjour ' . $maVariable . ', comment vas-tu?';
     ```
 ## Passage à la ligne (XHTML):
-    ```php
+    ``` php
     echo 'Bonjour <br /> Comment vas-tu?';
     ```
 
-### Exerice restant à faire
+### Exercices restants à faire
 * Dernier exercice des formulaires
 * Dernier exercice des variables globales
