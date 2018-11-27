@@ -59,7 +59,7 @@
         <tbody>
             <?php 
                 $nbJours = date('t', mktime(0,0,0,$date_mois,1,$date_annee)); // Nombre de jours dans le mois
-                $nbDayinWeek = strftime('%u', mktime(0,0,0,$date_mois,1,$date_annee)-1); // Numéro du jour dans la semaine
+                $nbDayinWeek = date('w', mktime(0,0,0,$date_mois,1,$date_annee)-1); // Numéro du jour dans la semaine
                 $flag = 0;
                 
                 echo '<tr>';
