@@ -7,3 +7,7 @@
     ```php
     echo 'Bonjour <br /> Comment vas-tu?';
     ```
+
+### Exerice restant à faire
+* Dernier exercice des formulaires
+* Dernier exercice des variables globales
