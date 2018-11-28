@@ -36,23 +36,32 @@
             echo "Validez les paramètres dans l'exercice 2";
         }
     ?>
-    <h2>Exercice 5</h2>
+    <h2>Exercice 5-6-7-8</h2>
 
     <?php if (!isset($_POST['firstName2']) && !isset($_POST['name2']) && !isset($_POST['civi2'])) { ?>
-    <form method="POST" action="form.php" enctype="multipart/form-data">
-        <select name="civi2" required>
-            <option value="chooseGenre">Sélectionnez votre civilité</option>
-            <option value="Mlle">Mademoiselle</option>
-            <option value="Mme">Madame</option>
-            <option value="Mr">Monsieur</option>
-        </select>
-        <input type="text" name="name2" placeholder="Votre nom" required>
-        <input type="text" name="firstName2" placeholder="Votre prénom" required>
-        <input type="file" name="userFile" accept=".pdf" required>
-        <input type="submit" value="Envoyer">
-    </form>
+        <form method="POST" action="form.php" enctype="multipart/form-data">
+            <select name="civi2" required>
+                <option value="chooseGenre">Sélectionnez votre civilité</option>
+                <option value="Mlle">Mademoiselle</option>
+                <option value="Mme">Madame</option>
+                <option value="Mr">Monsieur</option>
+            </select>
+            <input type="text" name="name2" placeholder="Votre nom" required>
+            <input type="text" name="firstName2" placeholder="Votre prénom" required>
+            <input type="file" name="userFile" accept=".pdf" required>
+            <input type="submit" value="Envoyer">
+        </form>
     <?php } else {
-        echo "Vous êtes ; " . $_POST['civi2'] . ' ' . $_POST['name2'] . ' ' . $_POST['firstName2'] . ' et le fichier uploadé est le suivant : ' . $_FILES['userFile']['name'] . '<br />';
+        $file = new SplFileInfo($_FILES['userFile']['name']);
+
+        if($file->getExtension() == 'pdf') {
+            echo "Vous êtes " . $_POST['civi2'] . ' ' . $_POST['name2'] . ' ' . $_POST['firstName2'] . ' et le fichier que vous avez uploadé est "' . $_FILES['userFile']['name'] . '".';
+        } else {
+            echo 'Veuillez uploader votre fichier en "PDF".'; ?>
+            <a href="form.php">Recommencer</a>
+        <?php 
+        }
+
     } ?>
 </body>
 </html>

@@ -17,7 +17,7 @@
                 $tab_mois = array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
 
                 foreach($tab_mois as $nbMois => $mois) {
-                    echo '<option value="' . ($nbMois+1) . '">' . $mois . '</option>'; // Affiche chaque mois dans le formulaire
+                    echo '<option value="' . ($nbMois+1) . '" id="' . $mois .'">' . $mois . '</option>'; // Affiche chaque mois dans le formulaire
                 }
             ?>
         </select>

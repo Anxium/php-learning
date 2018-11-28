@@ -7,7 +7,3 @@ echo 'Bonjour ' . $maVariable . ', comment vas-tu?';
 ``` php
 echo 'Bonjour <br /> Comment vas-tu?';
 ```
-
-### Exercices restants à faire
-* Dernier exercice des formulaires
-* Dernier exercice des variables globales

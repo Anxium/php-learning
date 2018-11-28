@@ -17,7 +17,7 @@
     <?php
         session_start();
 
-        echo 'Page 1';
+        echo 'Page 1 - Variables établie sur cette page';
 
         $_SESSION['nom'] = 'Avaux';
         $_SESSION['prenom'] = 'Axel';
@@ -39,10 +39,6 @@
     <a href="variablesGlobales2.php">Cliquez ici pour aller sur la seconde page</a><br />
     <?php
         echo 'Page 1';
-    ?>
-    <h2>Exercice 5</h2>
-    <?php
-        echo 'A FAIRE'
     ?>
 </body>
 </html>
