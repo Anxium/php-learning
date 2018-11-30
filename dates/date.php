@@ -18,7 +18,7 @@
     ?>
     <h2>Exercice 3</h2>
     <?php
-        setlocale(LC_ALL, 'fr_FR');
+        setlocale(LC_ALL, 'fr_FR.utf8');
 
         echo strftime("%A %d %B %Y")
     ?>
@@ -32,8 +32,10 @@
     <h2>Exercice 5</h2>
     <?php
         $today = strtotime('today');
-        $date = mktime(00, 00, 00, 5, 16, 2016);
-        $ecartEnJour = ($today-$date)/86400; //24h représente 86400 secondes
+        $date = strtotime('16 may 2016');
+        $mkToday = mktime(0,0,0,date('m'),date('d'),date('Y'));
+        $mkDate = mktime(0,0,0,5,16,2016);
+        $ecartEnJour = round(($mkToday-$mkDate)/86400); //24h représente 86400 secondes
 
         echo 'Il y a ' . $ecartEnJour . ' Jours entre aujourd\'hui et le 16 Mai 2016.';
     ?>

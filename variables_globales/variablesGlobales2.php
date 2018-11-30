@@ -18,24 +18,24 @@
     <h2>Exercice 4</h2>
     <a href="variablesGlobales.php">Cliquez ici pour retourner sur la première page</a><br />
     <?php
-        if (isset($_SESSION['user']) && isset($_SESSION['psw'])) {
-            echo 'Page 2 <br /><br />Nom d\'utilisateur: ' . $_SESSION['user'] . '<br /> MDP : ' . $_SESSION['psw'];
+        if (isset($_COOKIE['user']) && isset($_COOKIE['psw'])) {
+            echo 'Page 2 <br /><br />Nom d\'utilisateur: ' . $_COOKIE['user'] . '<br /> MDP : ' . $_COOKIE['psw'];
         } else {
             echo "Vous n'avez pas rempli correctement le formulaire de l'exercice 3.";
         }
     ?>
     <h2>Exercice 6</h2>
-    <form method="POST" action="#">
-        <input type="text" name="user" placeholder="Nouveau nom d'utilisateur">
-        <input type="password" name="psw" placeholder="Nouveau mot de passe">
+    <form method="POST" action="variablesGlobales2.php">
+        <input type="text" name="user2" placeholder="Nouveau nom d'utilisateur">
+        <input type="password" name="psw2" placeholder="Nouveau mot de passe">
         <input type="submit" value="Envoyer">
     </form>
     <?php
-        if (isset($_POST['user']) && isset($_POST['psw'])) {
-            $_SESSION['user'] = $_POST['user'];
-            $_SESSION['psw'] = $_POST['psw'];
+        if (isset($_POST['user2']) && isset($_POST['psw2'])) {
+            setcookie('user', $_POST['user2']);
+            setcookie('psw', $_POST['psw2']);
 
-            echo 'Nouveau nom d\'utilisateur : ' . $_SESSION['user'] . ' | Nouveau MDP : ' . $_SESSION['psw'];
+            echo 'Nouveau nom d\'utilisateur : ' . $_COOKIE['user'] . ' | Nouveau MDP : ' . $_COOKIE['psw'];
         }
     ?>
 </body>

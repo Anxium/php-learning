@@ -12,7 +12,7 @@
     <form action="TPdate.php" method="POST">
         <select name="month">
             <?php 
-                setlocale(LC_ALL, 'fr_FR');
+                setlocale(LC_ALL, 'fr_FR.utf8');
 
                 $tab_mois = array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
 

@@ -31,8 +31,8 @@
     </form>
     <?php
         if (isset($_POST['user']) && isset($_POST['psw'])) {
-            $_SESSION['user'] = $_POST['user'];
-            $_SESSION['psw'] = $_POST['psw'];
+            setcookie('user', $_POST['user']);
+            setcookie('psw', $_POST['psw']);
         }
     ?>
     <h2>Exercice 4</h2>
